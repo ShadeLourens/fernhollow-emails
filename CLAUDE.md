@@ -70,9 +70,17 @@ Copy these exactly, as written in the reference example:
 
 - `{user_data~First Name~Friend}`: first name, with "Friend" if it's missing
 - `{user_data~Email}`: email address
-- `{unsubscribe_action~ID~URL}`: unsubscribe link
+- `{preview_text}`: the hidden preheader, filled from the Preview Text field in EN's settings
+- `{unsubscribe_action~ID~URL}`: unsubscribe link. It goes to a subscription management page, where people can change their preferences or leave. Use the fake ID `00000` and `https://act.fernhollow.example/page/00000/subscriptions/1`.
 - `{campaignpage_url~ID~URL~label}`: tracked link to a campaign page
-- `en__component` classes make blocks editable in Engaging Networks' editor.
+
+Editable blocks (from EN's "Email templates editable regions" page). The template is for EN's Marketing Tools editor.
+
+- Text blocks: `en__component en__component--textblock`
+- Images: `en__component en__component--imageblock` (not textblock, even though the example uses it)
+- Groups an editor can duplicate: `en__component en__component--repeatable`
+- The letter's body sits in one droppable area: `en__component en__component--droppable ui-sortable`
+- The header and footer have no classes, so they're locked. Editors can't remove the unsubscribe link or the postal address.
 
 The receipt's fields (gift amount, date, reference number) aren't in the example. Look them up in Engaging Networks' own documentation. **Never guess a field.** If you can't confirm one, tell me.
 
@@ -111,14 +119,14 @@ The same as the donation page:
 - Every link to the donation page gets UTM tags:
   `?utm_source=email&utm_medium=email&utm_campaign=second-chances&utm_content=...`
 - `utm_content` is different for each link, so reports show which one was clicked: `give-50-button`, `own-amount-link` and `ps-link`.
-- In Engaging Networks these links would usually be wrapped in `{campaignpage_url~...}`. The README explains this.
+- In Engaging Networks these links would usually be wrapped in `{campaignpage_url~...}`, with an underscore label and `en_og_source` (Origin Source). We don't add those here, because the donation page isn't an EN page, so they wouldn't work. The README explains this.
 
 ## The two kinds of email
 
 **The appeal is a marketing email.** Its footer has:
 
 - why you're receiving it
-- Update your email preferences and Unsubscribe
+- one link: "Manage your email preferences or unsubscribe"
 - the fictional postal address
 - the fictional-organization line.
 

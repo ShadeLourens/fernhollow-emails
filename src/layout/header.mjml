@@ -1,0 +1,11 @@
+<!-- Header: the logo on teal. The image carries its own teal background, so
+     nothing changes color in dark mode. It has no en__component class, so it's
+     locked in Engaging Networks. The alt text is styled to look like a heading
+     when images are turned off. -->
+<mj-section background-color="#045174">
+  <mj-column>
+    <mj-text css-class="header" padding="0">
+      <img src="https://shadelourens.github.io/fernhollow-emails/assets/header.png" width="600" height="89" alt="Fernhollow Animal Alliance" style="display:block; width:100%; max-width:600px; height:auto; border:0; font-family:'Nunito Sans', Arial, sans-serif; font-size:26px; font-weight:800; color:#f8dcbf;">
+    </mj-text>
+  </mj-column>
+</mj-section>

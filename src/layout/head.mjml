@@ -1,0 +1,47 @@
+<mjml>
+<mj-head>
+  <!-- Fonts from Google Fonts. Gmail and Outlook ignore web fonts and show Arial instead. -->
+  <mj-font name="Nunito Sans" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" />
+  <mj-font name="Atkinson Hyperlegible" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
+
+  <!-- Default settings for every block, so we don't repeat them in each email.
+       Colors are the donation page's: navy #001f3d, teal #045174, amber #ffa000,
+       orange #e87a00 (lines only), cream #fdf1e4, mist #f1f4f7. -->
+  <mj-attributes>
+    <mj-all font-family="'Atkinson Hyperlegible', Arial, sans-serif" />
+    <mj-section padding="0" background-color="#ffffff" />
+
+    <!-- Text blocks. The en__component classes make each one editable in Engaging Networks. -->
+    <mj-text css-class="en__component en__component--textblock" padding="0 40px 20px" font-size="17px" line-height="28px" color="#001f3d" />
+
+    <!-- Buttons: amber with navy text, never white -->
+    <mj-button css-class="en__component en__component--textblock" font-family="'Nunito Sans', Arial, sans-serif" font-size="18px" font-weight="800" background-color="#ffa000" color="#001f3d" border-radius="999px" inner-padding="17px 40px" padding="0 28px 20px" />
+
+    <!-- Headings use Nunito Sans, like the donation page -->
+    <mj-class name="heading" font-family="'Nunito Sans', Arial, sans-serif" font-weight="800" />
+
+    <!-- Footer text: 13px, and no en__component class, so editors can't change it -->
+    <mj-class name="footer" css-class="footer-text" font-size="13px" line-height="21px" color="#ffffff" padding="0 40px 14px" />
+  </mj-attributes>
+
+  <!-- Copied onto every link by MJML: navy and underlined -->
+  <mj-style inline="inline">
+    a { color: #001f3d; text-decoration: underline; }
+    .footer-text a { color: #ffffff; }
+  </mj-style>
+
+  <!-- On phones, use 24px at the sides instead of 40px so the text has more room -->
+  <mj-style>
+    @media only screen and (max-width: 479px) {
+      td.en__component--textblock,
+      td.en__component--imageblock,
+      td.footer-text,
+      td.divider,
+      .impact-wrap > table > tbody > tr > td {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+    }
+  </mj-style>
+</mj-head>
+</mjml>
