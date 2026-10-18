@@ -1,0 +1,195 @@
+<!-- Email 1: the Second Chances appeal. A marketing email, so its footer
+     has the unsubscribe link. -->
+<mjml lang="en">
+  <mj-head>
+    <!-- Subject line A. Subject B is set up as an A/B test inside Engaging Networks. -->
+    <mj-title>Biscuit had never stood on grass</mj-title>
+    <!-- Hidden preheader: Engaging Networks fills {preview_text} from its Preview Text field -->
+    <mj-preview>{preview_text}</mj-preview>
+    <mj-include path="./layout/head.mjml" />
+  </mj-head>
+
+  <mj-body background-color="#001f3d" width="600px">
+    <mj-include path="./layout/header.mjml" />
+
+    <!-- The letter. Editors can drag new blocks into this area in Engaging Networks,
+         and each group inside it can be duplicated (repeatable). -->
+    <mj-raw
+      ><div class="en__component en__component--droppable ui-sortable"></mj-raw
+    >
+
+    <!-- Opening -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-section padding="40px 0 8px">
+      <mj-column>
+        <mj-text>Hi {user_data~First Name~Friend},</mj-text>
+        <mj-text
+          >Eight weeks ago, our team walked into a puppy mill two hours north of
+          here. The first thing we noticed was the quiet. There were dozens of
+          dogs in stacked wire cages, and hardly a bark between them.</mj-text
+        >
+        <mj-text
+          >Biscuit was in a cage near the back. He was about five months old,
+          underweight, and his paws were sore from standing on wire. When we
+          opened the door, he didn't run to us. He pressed himself into the
+          corner and watched.</mj-text
+        >
+      </mj-column>
+    </mj-section>
+    <mj-raw></div></mj-raw>
+
+    <!-- Biscuit's photo: shown at 520 × 260, the file is twice that size for sharp screens -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-section padding="8px 0 28px">
+      <mj-column>
+        <mj-text
+          css-class="en__component en__component--imageblock"
+          padding="0 40px"
+        >
+          <img
+            src="https://shadelourens.github.io/fernhollow-emails/assets/biscuit.jpg"
+            width="520"
+            height="260"
+            alt="Biscuit, a small scruffy puppy, sitting on green grass."
+            style="
+              display: block;
+              width: 100%;
+              max-width: 520px;
+              height: auto;
+              border: 0;
+              border-radius: 12px;
+            "
+          />
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw></div></mj-raw>
+
+    <!-- What happened next -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-section padding="0 0 8px">
+      <mj-column>
+        <mj-text
+          >Today, Biscuit is with a foster family. He's had his vaccinations,
+          he's put on weight, and last Tuesday he stood on grass for the very
+          first time. He sat down very carefully, as if he wasn't sure it was
+          allowed. Then he rolled in it.</mj-text
+        >
+        <mj-text
+          >Biscuit got his second chance because people like you gave. But there
+          are still dogs waiting in places like that barn, and we can only go
+          back for them if we can pay for what comes next: the vet checks, the
+          vaccinations and a quiet place to recover.</mj-text
+        >
+      </mj-column>
+    </mj-section>
+    <mj-raw></div></mj-raw>
+
+    <!-- The ask: a cream box with an orange stripe on top, the impact line and the button -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-wrapper
+      css-class="impact-wrap"
+      padding="4px 40px 0"
+      background-color="#ffffff"
+    >
+      <mj-section
+        background-color="#fdf1e4"
+        border-top="4px solid #e87a00"
+        border-radius="0 0 12px 12px"
+        padding="28px 0 30px"
+      >
+        <mj-column>
+          <mj-text
+            mj-class="heading"
+            align="center"
+            font-size="21px"
+            line-height="29px"
+            padding="0 28px 22px"
+            >$50 helps give a rescued dog vaccinations and a safe place to
+            recover.</mj-text
+          >
+          <mj-button
+            href="https://shadelourens.github.io/fernhollow-portfolio/?utm_source=email&utm_medium=email&utm_campaign=second-chances&utm_content=give-50-button"
+            >Give $50 today</mj-button
+          >
+          <mj-text
+            align="center"
+            font-size="16px"
+            line-height="25px"
+            padding="0 28px"
+            >Or
+            <a
+              href="https://shadelourens.github.io/fernhollow-portfolio/?utm_source=email&utm_medium=email&utm_campaign=second-chances&utm_content=own-amount-link"
+              >choose your own amount</a
+            >. Every dollar helps a dog get a second chance.</mj-text
+          >
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-raw></div></mj-raw>
+
+    <!-- Sign-off -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-section padding="36px 0 8px">
+      <mj-column>
+        <mj-text>Thank you for being in their corner,</mj-text>
+        <mj-text line-height="24px"
+          ><strong
+            style="
+              font-family: &quot;Nunito Sans&quot;, Arial, sans-serif;
+              font-size: 18px;
+            "
+            >Maya Daniels</strong
+          ><br /><span style="font-size: 16px; color: #045174"
+            >Rescue Coordinator, Fernhollow Animal Alliance</span
+          ></mj-text
+        >
+      </mj-column>
+    </mj-section>
+    <mj-raw></div></mj-raw>
+
+    <!-- P.S. under a thin line -->
+    <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
+    <mj-section padding="0 0 20px">
+      <mj-column>
+        <mj-divider
+          css-class="divider"
+          border-width="1px"
+          border-color="#e6eaee"
+          padding="0 40px 24px"
+        />
+        <mj-text font-size="16px" line-height="26px"
+          ><strong>P.S.</strong> Want to help all year round? A monthly gift of
+          $15 helps cover regular check-ups for dogs in our care, and you can
+          cancel any time. Just choose "Give monthly" when you
+          <a
+            href="https://shadelourens.github.io/fernhollow-portfolio/?utm_source=email&utm_medium=email&utm_campaign=second-chances&utm_content=ps-link"
+            >get to the donation page</a
+          >.</mj-text
+        >
+      </mj-column>
+    </mj-section>
+    <mj-raw></div></mj-raw>
+
+    <!-- End of the droppable area -->
+    <mj-raw></div></mj-raw>
+
+    <!-- Footer: teal like the header, locked in Engaging Networks so editors can't remove the
+         unsubscribe link or the postal address -->
+    <mj-section background-color="#045174" padding="32px 0 36px">
+      <mj-column>
+        <mj-text mj-class="footer"
+          >You're receiving this because you signed up for updates from
+          Fernhollow Animal Alliance.</mj-text
+        >
+        <mj-text mj-class="footer"
+          ><a
+            href="{unsubscribe_action~00000~https://act.fernhollow.example/page/00000/subscriptions/1}"
+            >Manage your email preferences or unsubscribe</a
+          ></mj-text
+        >
+        <mj-include path="./layout/footer.mjml" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

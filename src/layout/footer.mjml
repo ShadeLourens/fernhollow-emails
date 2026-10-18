@@ -1,0 +1,9 @@
+<!-- Footer lines that both emails share. Each email adds its own
+     "why you're receiving this" line above these. -->
+<mj-text mj-class="footer" color="#f8dcbf">
+  Fernhollow Animal Alliance, 12 Hollow Lane, Fernhollow, ST 00000
+</mj-text>
+<mj-text mj-class="footer" color="#f1f4f7" padding="0 40px">
+  Fernhollow Animal Alliance is a fictional organization created for a
+  portfolio. Biscuit's photo is AI-generated, and no donations are processed.
+</mj-text>
