@@ -1,0 +1,8 @@
+# My reference files: a real organization's emails and code. Never commit these.
+reference/
+
+# Mac system files
+.DS_Store
+
+# Installed packages (npm install recreates them from package-lock.json)
+node_modules/
