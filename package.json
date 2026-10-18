@@ -1,0 +1,11 @@
+{
+  "name": "fernhollow-emails",
+  "private": true,
+  "description": "Appeal and receipt emails for Fernhollow Animal Alliance (fictional), built with MJML.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "mjml": "5.4.1"
+  }
+}
