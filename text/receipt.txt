@@ -1,0 +1,29 @@
+Hi {user_data~First Name~Friend},
+
+Thank you for your gift. Because of you, more dogs like Biscuit can get the vet checks, the vaccinations and a quiet place to recover.
+
+Biscuit's foster family sent us this photo last week. He has claimed the sofa.
+
+Your receipt
+
+Amount: {receipt_data~amount~[en]}
+Date: {receipt_data~createdOn~[yyyy-MM-dd]}
+Reference: {receipt_data~txId}
+Receipt sent to: {user_data~Email}
+
+Please keep this email for your records. Fernhollow Animal Alliance is a 501(c)(3) nonprofit organization, EIN 00-0000000 (fictional). No goods or services were provided in exchange for your gift.
+
+Giving monthly? Thank you for being there all year round. Each January, we'll send you one receipt for all your monthly gifts from the year before. You can change or cancel your monthly gift any time by replying to this email or writing to donors@fernhollow.example.
+
+With gratitude,
+
+Maya Daniels
+Rescue Coordinator, Fernhollow Animal Alliance
+
+---
+
+You're receiving this because you made a gift to Fernhollow Animal Alliance.
+
+Fernhollow Animal Alliance, 12 Hollow Lane, Fernhollow, ST 00000
+
+Fernhollow Animal Alliance is a fictional organization created for a portfolio. Biscuit's photo is AI-generated, and no donations are processed.

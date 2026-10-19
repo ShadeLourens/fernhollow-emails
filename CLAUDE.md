@@ -82,9 +82,15 @@ Editable blocks (from EN's "Email templates editable regions" page). The templat
 - The letter's body sits in one droppable area: `en__component en__component--droppable ui-sortable`
 - The header and footer have no classes, so they're locked. Editors can't remove the unsubscribe link or the postal address.
 
-The receipt's fields (gift amount, date, reference number) aren't in the example. Look them up in Engaging Networks' own documentation. **Never guess a field.** If you can't confirm one, tell me.
+The receipt's fields come from EN's "Receipt Data Tags" page (they work in thank-you emails):
 
-Sample data for the previews: first name "Jordan", email "jordan@example.com", gift "$51.75" one-time, reference "FHA-000123".
+- `{receipt_data~amount~[en]}`: gift amount
+- `{receipt_data~createdOn~[yyyy-MM-dd]}`: gift date. `yyyy-MM-dd` is the only format EN's docs show, so the README says to pick a US format in EN's insert tool.
+- `{receipt_data~txId}`: transaction ID, used as the reference
+
+**Never guess a field.** If you can't confirm one, tell me.
+
+Sample data for the previews: first name "Jordan", email "jordan@example.com", gift "$51.75" one-time, date "2026-10-19", reference "1234567" (a plain number, because EN's docs don't show what its transaction IDs look like).
 
 ## Email coding rules
 
