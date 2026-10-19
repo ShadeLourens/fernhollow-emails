@@ -96,7 +96,7 @@ Emails work differently from web pages, so some donation-page rules change here.
   - always full addresses, starting `https://shadelourens.github.io/fernhollow-emails/assets/`
   - twice the size they're shown at, with width and height set
   - JPG or PNG only, never SVG (Gmail and Outlook don't show SVG)
-  - photos compressed to about 255KB.
+  - photos compressed to 255KB or less.
 - **Alt text** on every image. The header image's alt text is styled (font, size, color), so it still looks like a heading when images are blocked.
 - Real text, never text inside images, apart from the logo in the header.
 - **Fonts:** Nunito Sans for headings and buttons, Atkinson Hyperlegible for body text, with Arial as the backup. Gmail and Outlook will show Arial, so check that it still looks right.
@@ -147,7 +147,12 @@ The same as the donation page:
 - **Never ask for, print, log or write down the Mailgun API key**, in any file, the chat or a commit. It lives only in an environment variable on my computer (`MAILGUN_API_KEY`).
 - Only send the preview versions, and only to my verified test inboxes.
 - The README shows the one `curl` command I use.
-- Screenshots go in `screenshots/`: Gmail on the web and the phone app (light and dark), Apple Mail in dark mode, and Outlook.com.
+- Screenshots go in `screenshots/`, named like `inbox-appeal-gmail-app-dark.png`:
+  - Gmail on the web, plus one with images off (Settings → "Ask before displaying external images"). Gmail on the web doesn't change email colors in its dark theme, so it needs no dark screenshot.
+  - the Gmail phone app, light and dark
+  - Apple Mail in dark mode
+  - Outlook.com, light and dark (its dark mode changes colors differently from Gmail's)
+- Sandbox emails often land in Spam or Promotions, especially in Outlook.com. That's how sandbox sending works, not a problem with the email: mark them "not spam" and carry on.
 - Classic Outlook on Windows: we only start the Email on Acid trial once both emails are finished. If it isn't tested, the README says so.
 
 ## Comments

@@ -47,16 +47,18 @@
   - an orange stripe above the impact box, because orange is for lines and amber for buttons
   - 16px for the smaller body text and 13px for the footer
 - If the receipt's EN fields can't be confirmed in step 3, the EN version will use clearly marked placeholders like `[GIFT_AMOUNT]`, and the README will say they need connecting.
+- I chose teal for the header and footer so they match the brand, and navy for the background so the whole email and the impact box stand out.
 
 **Tested:**
 
 - `npm run build` passes all merge-field checks, and both files are 26.7KB.
 - Broke a copy of the project on purpose: a typo, a changed ID and an unlisted field each stopped the build with a plain message, and a 144KB file gave the Gmail warning.
 - Looked at it at 600px, at 320px and with images off: the header's alt text shows as peach text on teal.
+- At 320px the logo looks quite small, but it's still readable. For now I'm keeping the logo and its teal background as one image, so dark mode can't change its colors.
 
 **Still to do:**
 
-- Commit step 1 on `fernhollow/step-1-appeal` and open a pull request.
+- Commit step 1 on `fernhollow/step-1-appeal` and open a pull request. ✅
 - Step 2: the plain-text appeal, the GitHub Pages preview page, test sends and inbox screenshots.
 - Look up EN's receipt fields before step 3.
 - README notes: `en_og_source`, the locked header and footer, the Marketing Tools editor and the A/B subject lines.
