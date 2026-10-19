@@ -62,3 +62,39 @@
 - Step 2: the plain-text appeal, the GitHub Pages preview page, test sends and inbox screenshots.
 - Look up EN's receipt fields before step 3.
 - README notes: `en_og_source`, the locked header and footer, the Marketing Tools editor and the A/B subject lines.
+
+## 2026-10-19
+
+**Asked Claude to:** build step 2: the plain-text appeal, the GitHub Pages project page, and help me with test sends and inbox screenshots.
+
+**What I changed:**
+
+- Created `text/appeal.txt`: the same words as the HTML, with every link written out in full and the EN merge fields kept in.
+- `build.js` now also makes `dist/appeal-preview.txt` and runs the same merge-field checks on the plain text. `{preview_text}` is only expected in the HTML, because plain text has no hidden preheader.
+- Created `index.html`, a small project page that links to the previews and screenshots. It fixed the GitHub Pages 404.
+- The preview's unsubscribe link now goes to a short note on `index.html` explaining that it's a demo.
+- Set up Mailgun and an Outlook.com account, and sent test emails with the HTML and the plain text together, the way real platforms send.
+- Added 16 inbox screenshots: Gmail (web and iPhone app), Apple Mail (Mac and iPhone) and Outlook.com, in light, dark and with images off.
+
+**Decisions I made:**
+
+- Wrote the plain text by hand. EN has a "Generate plain text from HTML" button, but it doesn't update when the HTML changes, and writing it myself means I choose the wording and the order of the links.
+- EN's docs don't say how merge fields like `{unsubscribe_action~…}` come out in plain text, so the README will say to check that with one EN test send.
+- No Gmail images-off screenshot, because Apple Mail and Outlook.com already show it.
+
+**Tested:**
+
+- The plain text matches the HTML word for word (17 lines), and the links are the same and in the same order.
+- Images off: the header's alt text shows as big peach text on teal in Apple Mail and Outlook.com.
+- Outlook.com only shows the navy background when the reading pane is wider than 600px. In a narrow pane there's no room for it. That's not a bug.
+- Dark mode:
+  - Apple Mail keeps my design exactly as it is.
+  - Gmail and Outlook.com darken the email themselves. The button turns dark orange with light text, which is still readable.
+  - In the Gmail app, the teal footer turns light blue with dark text, which is still readable.
+- The header looks the same everywhere, because the logo and its teal are one image.
+
+**Still to do:**
+
+- Step 3: the receipt email, with a copy draft first.
+- Email on Acid for classic Outlook on Windows, once both emails are done.
+- README.
