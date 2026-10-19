@@ -18,6 +18,18 @@ const emails = [
         "https://shadelourens.github.io/fernhollow-emails/#unsubscribe",
     },
   },
+  {
+    name: "receipt",
+    sampleData: {
+      "{user_data~First Name~Friend}": "Jordan",
+      "{preview_text}": "Thank you. Biscuit has something to show you.",
+      // The receipt fields come from EN's "Receipt Data Tags" page
+      "{receipt_data~amount~[en]}": "$51.75",
+      "{receipt_data~createdOn~[yyyy-MM-dd]}": "2026-10-19",
+      "{receipt_data~txId}": "1234567",
+      "{user_data~Email}": "jordan@example.com",
+    },
+  },
 ];
 
 // What a merge field looks like: a name in curly brackets, sometimes with
