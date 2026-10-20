@@ -1,7 +1,7 @@
 <mjml>
 <mj-head>
   <!-- Fonts from Google Fonts. Gmail and Outlook ignore web fonts and show Arial instead. -->
-  <mj-font name="Nunito Sans" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" />
+  <mj-font name="Nunito Sans" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" />
   <mj-font name="Atkinson Hyperlegible" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
 
   <!-- Default settings for every block, so we don't repeat them in each email.
@@ -15,10 +15,15 @@
     <mj-text css-class="en__component en__component--textblock" padding="0 40px 20px" font-size="17px" line-height="28px" color="#001f3d" />
 
     <!-- Buttons: amber with navy text, never white -->
-    <mj-button css-class="en__component en__component--textblock" font-family="'Nunito Sans', Arial, sans-serif" font-size="18px" font-weight="800" background-color="#ffa000" color="#001f3d" border-radius="999px" inner-padding="17px 40px" padding="0 28px 20px" />
+    <mj-button css-class="en__component en__component--textblock" font-family="'Nunito Sans', Arial, sans-serif" font-size="18px" font-weight="700" background-color="#ffa000" color="#001f3d" border-radius="999px" inner-padding="17px 40px" padding="0 28px 20px" />
 
-    <!-- Headings use Nunito Sans, like the donation page -->
-    <mj-class name="heading" font-family="'Nunito Sans', Arial, sans-serif" font-weight="800" />
+    <!-- Headings use Nunito Sans, like the donation page. Bold (700), not 800:
+         on Windows, Arial at 800 turns into the much heavier Arial Black. -->
+    <mj-class name="heading" font-family="'Nunito Sans', Arial, sans-serif" font-weight="700" />
+
+    <!-- Blocks that hold an image. Classic Outlook crops an image to the line height
+         of the block around it, so these use a normal line height instead of 28px. -->
+    <mj-class name="image" line-height="normal" />
 
     <!-- Footer text: 13px, and no en__component class, so editors can't change it -->
     <mj-class name="footer" css-class="footer-text" font-size="13px" line-height="21px" color="#ffffff" padding="0 40px 14px" />
