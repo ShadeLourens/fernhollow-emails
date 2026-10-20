@@ -102,7 +102,7 @@ Emails work differently from web pages, so some donation-page rules change here.
   - always full addresses, starting `https://shadelourens.github.io/fernhollow-emails/assets/`
   - twice the size they're shown at, with width and height set
   - JPG or PNG only, never SVG (Gmail and Outlook don't show SVG)
-  - photos compressed to 255KB or less.
+  - photos under 200KB (Email on Acid flags anything bigger). Compress from the original photo: re-compressing a JPEG makes it blockier, not smaller.
 - **Alt text** on every image. The header image's alt text is styled (font, size, color), so it still looks like a heading when images are blocked.
 - Real text, never text inside images, apart from the logo in the header.
 - **Fonts:** Nunito Sans for headings and buttons, Atkinson Hyperlegible for body text, with Arial as the backup. Gmail and Outlook will show Arial, so check that it still looks right.

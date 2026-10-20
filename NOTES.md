@@ -98,3 +98,71 @@
 - Step 3: the receipt email, with a copy draft first.
 - Email on Acid for classic Outlook on Windows, once both emails are done.
 - README.
+
+### Later on 2026-10-19
+
+**Asked Claude to:** restyle the project page, look up EN's receipt fields, draft the receipt copy, then build and test the receipt.
+
+**What I changed:**
+
+- Restyled `index.html` from my design: a white header with the logo, a campaign tag, cards for each email's versions, inbox cards with orange ➜ arrows instead of underlines, and a navy footer.
+- Found EN's real receipt fields on its "Receipt Data Tags" page, so no placeholders were needed: `{receipt_data~amount~[en]}`, `{receipt_data~createdOn~[yyyy-MM-dd]}` and `{receipt_data~txId}`, plus `{user_data~Email}`.
+- Built `src/receipt.mjml` and `text/receipt.txt`. They reuse the shared header, styles and footer, and the receipt details sit in the same cream box as the appeal's impact box.
+- Added the receipt to `build.js`, so the same merge-field checks run on it. The receipt HTML is 21.7KB.
+- Added Biscuit's sofa photo as `assets/biscuit-sofa.jpg`.
+- Did a test send and added the receipt's screenshots to the project page.
+
+**Decisions I made:**
+
+- Changed Claude's draft so it works as a real US receipt:
+  - "receipt" in the subject, because donors search for it at tax time
+  - 501(c)(3) wording instead of "registered charity"
+  - a sentence telling monthly donors they get one receipt each January
+  - "Receipt sent to:"
+  - a plain-number sample reference
+- Kept the receipt transactional: no unsubscribe link and no marketing links. The photo thanks the donor without asking for anything.
+- The date uses `yyyy-MM-dd`, the only format EN's docs show. I wanted "October 19, 2026", but couldn't confirm that pattern, so the README will say to choose a US format in EN's insert tool instead of guessing.
+- Removed Biscuit's photo from the project page, because the page is a signpost to the emails.
+
+**Tested:**
+
+- Gmail app (light, dark and before images loaded) and Outlook.com: the receipt box and photo look right everywhere.
+- Gmail turns the donor's email address into a blue link, and with images off it shows an empty frame for the photo instead of the alt text. Neither breaks anything.
+
+**Still to do:**
+
+- Email on Acid for classic Outlook on Windows (about an hour).
+- Write the README.
+
+## 2026-10-20
+
+**Asked Claude to:** go through the Email on Acid (now Mailgun Inspect) results with me, fix what it found, and write reusable guides for future email projects.
+
+**What I changed:**
+
+- Ran both emails through Email on Acid on the Premium free trial: classic Outlook on Windows, accessibility, links, images and spam.
+- Fixed the images being cropped in classic Outlook. The image blocks had a 28px line height, and Outlook cut both photos and the header down to a 28px strip. Those blocks now use a normal line height.
+- Fixed the impact line and button showing in Arial Black in Outlook. Weight 800 plus Arial on Windows switches to Arial Black, so headings and the button now use weight 700.
+- Added an `<h1>` (the header logo) and `<h2>`s (the impact line and "Your receipt") for screen readers. They look the same as before.
+- Re-exported both photos from the originals to get them under 200KB (151KB and 175KB), and changed the rule in CLAUDE.md to match.
+- Added "Outlook on Windows" screenshots to the project page, including a "before the fix" one for the appeal.
+- Wrote two reusable guides for future projects: email-building lessons and Engaging Networks tips.
+
+**Decisions I made:**
+
+- Chose the Premium trial over Basic for its accessibility, link, image and spam checks, which match what the job asks for.
+- Kept the button without an underline. It's a filled button, so it clearly looks clickable, and CLAUDE.md allows this exception.
+- Showed the cropped "before" screenshot next to the fixed ones, because finding, fixing and proving a bug is part of QA.
+- Kept the two guides as separate documents, so a future project only gets the one it needs.
+
+**Tested:**
+
+- The retest in classic Outlook (light and dark) shows both emails in full, with normal bold headings.
+- The "heading one" warning is gone. The only accessibility note left is the button's missing underline.
+- Spam: everything passes except Yahoo, which is about the sandbox sender's reputation, not the content.
+- "Missing SSL certificate" on the unsubscribe link is a false alarm. I checked, and its HTTPS works.
+
+**Still to do:**
+
+- Write the README, including "How I worked with Claude Code".
+- Petition page, GitHub profile, LinkedIn, then the cover letter. Submit on Oct 24.

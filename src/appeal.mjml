@@ -44,6 +44,7 @@
       <mj-column>
         <mj-text
           css-class="en__component en__component--imageblock"
+          mj-class="image"
           padding="0 40px"
         >
           <img
@@ -105,8 +106,8 @@
             font-size="21px"
             line-height="29px"
             padding="0 28px 22px"
-            >$50 helps give a rescued dog vaccinations and a safe place to
-            recover.</mj-text
+            ><h2 style="margin:0; font-family:'Nunito Sans', Arial, sans-serif; font-size:21px; line-height:29px; font-weight:700; color:#001f3d;">$50 helps give a rescued dog vaccinations and a safe place to
+            recover.</h2></mj-text
           >
           <mj-button
             href="https://shadelourens.github.io/fernhollow-portfolio/?utm_source=email&utm_medium=email&utm_campaign=second-chances&utm_content=give-50-button"

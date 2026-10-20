@@ -31,7 +31,7 @@
     <mj-raw><div class="en__component en__component--repeatable"></mj-raw>
     <mj-section padding="8px 0 28px">
       <mj-column>
-        <mj-text css-class="en__component en__component--imageblock" padding="0 40px">
+        <mj-text css-class="en__component en__component--imageblock" mj-class="image" padding="0 40px">
           <img src="https://shadelourens.github.io/fernhollow-emails/assets/biscuit-sofa.jpg" width="520" height="260" alt="Biscuit, asleep and curled up on a soft blanket on a sofa." style="display:block; width:100%; max-width:520px; height:auto; border:0; border-radius:12px;">
         </mj-text>
       </mj-column>
@@ -43,7 +43,7 @@
     <mj-wrapper css-class="impact-wrap" padding="4px 40px 0" background-color="#ffffff">
       <mj-section background-color="#fdf1e4" border-top="4px solid #e87a00" border-radius="0 0 12px 12px" padding="26px 0 26px">
         <mj-column>
-          <mj-text mj-class="heading" font-size="21px" line-height="29px" padding="0 28px 12px">Your receipt</mj-text>
+          <mj-text mj-class="heading" font-size="21px" line-height="29px" padding="0 28px 12px"><h2 style="margin:0; font-family:'Nunito Sans', Arial, sans-serif; font-size:21px; line-height:29px; font-weight:700; color:#001f3d;">Your receipt</h2></mj-text>
           <mj-text padding="0 28px">
             Amount: <strong>{receipt_data~amount~[en]}</strong><br>
             Date: <strong>{receipt_data~createdOn~[yyyy-MM-dd]}</strong><br>
