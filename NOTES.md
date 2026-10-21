@@ -52,7 +52,7 @@
 **Tested:**
 
 - `npm run build` passes all merge-field checks, and both files are 26.7KB.
-- Broke a copy of the project on purpose: a typo, a changed ID and an unlisted field each stopped the build with a plain message, and a 144KB file gave the Gmail warning.
+- Claude broke a copy of the project on purpose to test the checks: a typo, a changed ID and an unlisted field each stopped the build with a plain message, and a 144KB file gave the Gmail warning.
 - Looked at it at 600px, at 320px and with images off: the header's alt text shows as peach text on teal.
 - At 320px the logo looks quite small, but it's still readable. For now I'm keeping the logo and its teal background as one image, so dark mode can't change its colors.
 
@@ -106,7 +106,7 @@
 **What I changed:**
 
 - Restyled `index.html` from my design: a white header with the logo, a campaign tag, cards for each email's versions, inbox cards with orange ➜ arrows instead of underlines, and a navy footer.
-- Found EN's real receipt fields on its "Receipt Data Tags" page, so no placeholders were needed: `{receipt_data~amount~[en]}`, `{receipt_data~createdOn~[yyyy-MM-dd]}` and `{receipt_data~txId}`, plus `{user_data~Email}`.
+- Claude found EN's real receipt fields on its "Receipt Data Tags" page, so no placeholders were needed: `{receipt_data~amount~[en]}`, `{receipt_data~createdOn~[yyyy-MM-dd]}` and `{receipt_data~txId}`, plus `{user_data~Email}`.
 - Built `src/receipt.mjml` and `text/receipt.txt`. They reuse the shared header, styles and footer, and the receipt details sit in the same cream box as the appeal's impact box.
 - Added the receipt to `build.js`, so the same merge-field checks run on it. The receipt HTML is 21.7KB.
 - Added Biscuit's sofa photo as `assets/biscuit-sofa.jpg`.
@@ -114,7 +114,7 @@
 
 **Decisions I made:**
 
-- Changed Claude's draft so it works as a real US receipt:
+- Approved changes to Claude's draft, suggested by my reviewer chat, so it works as a real US receipt:
   - "receipt" in the subject, because donors search for it at tax time
   - 501(c)(3) wording instead of "registered charity"
   - a sentence telling monthly donors they get one receipt each January
@@ -160,7 +160,7 @@
 - The retest in classic Outlook (light and dark) shows both emails in full, with normal bold headings.
 - The "heading one" warning is gone. The only accessibility note left is the button's missing underline.
 - Spam: everything passes except Yahoo, which is about the sandbox sender's reputation, not the content.
-- "Missing SSL certificate" on the unsubscribe link is a false alarm. I checked, and its HTTPS works.
+- "Missing SSL certificate" on the unsubscribe link is a false alarm. Claude checked, and its HTTPS works.
 
 **Still to do:**
 
