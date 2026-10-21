@@ -150,7 +150,7 @@ The `<` sends what's inside each file, so the HTML and the plain text go in the 
 
 ## How I worked with AI
 
-Claude Code wrote the plans and the code. Before approving anything, I had a separate Claude conversation review each plan, then decided what to accept, change or reject. For example, I kept the header as one image instead of splitting it, chose to verify every merge field in EN's docs rather than guess, and held back the US date format because EN's docs didn't confirm it. I ran every test myself: test sends, inbox screenshots and Email on Acid, which is where I found the classic Outlook crop.
+Claude Code wrote the plans and the code. Before approving anything, I had a separate Claude conversation review each plan, then I decided what to accept, change or reject. For example, I kept the header as one image instead of splitting it, chose to verify every merge field in EN's docs rather than guess, and held back the US date format because EN's docs didn't confirm it. I ran every test myself: test sends, inbox screenshots and Email on Acid, which is where I found the classic Outlook crop.
 
 The commits are co-authored with Claude, so the history shows how the work was done. [`NOTES.md`](NOTES.md) records what I asked for and why I made each decision, and [`CLAUDE.md`](CLAUDE.md) holds the project rules I gave Claude Code.
 
